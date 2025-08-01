@@ -9,7 +9,7 @@ def setup():
     _port = os.getenv("MLFLOW_PORT", "5050")
 
     # Parse the ML Flow TAGs
-    print("Configuring the ML Flow host")
+    print(f"Configuring the ML Flow host to {_host}:{_port}")
     mlflow.set_tracking_uri(f"http://{_host}:{_port}")
 
 
