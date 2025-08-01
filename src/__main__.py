@@ -52,7 +52,8 @@ def main():
 
 
 def generate_training_data(n=100):
-    URL = "http://127.0.0.1:3000/test"
+    host = os.getenv("SERVER_URL", "127.0.0.1")
+    URL = f"http://{host}:3000/test"
     arr: List[ApiRecord] = []
     for _ in range(n):
 
