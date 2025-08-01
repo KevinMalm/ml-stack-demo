@@ -226,6 +226,7 @@ import ml_stack # Custom python library (see `ml-stack-py` branch)
 
 
 def main():
+    ml_stack.setup()
 
     with mlflow.start_run():
         ml_stack.configure()
