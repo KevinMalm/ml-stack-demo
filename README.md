@@ -10,7 +10,7 @@ infrastructure and production code. In this example, the Deployment Project will
 be called "demo"
 
 ```
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 ml-stack-demo % ml-stack --init demo
+(.ml-stack-demo) <computer> ml-stack-demo % ml-stack --init demo
 ```
 
 <details>
@@ -32,7 +32,7 @@ After the deployment repository has been initialized, the template structure
 looks like:
 
 ```bash
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 ml-stack-demo % cd demo && tree
+(.ml-stack-demo) <computer> ml-stack-demo % cd demo && tree
 .
 ├── config # Model Configuration folder
 ├── env.sh
@@ -73,26 +73,26 @@ models that we want to manage. Let's create 2 models, `am-i-a-dog` and
 `am-i-a-fish` that will help us determine what is a dog and what is a fish.
 
 ```
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 demo % ml-stack --init --model am-i-a-dog
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 demo % ml-stack --init --model am-i-a-fish
+(.ml-stack-demo) <computer> demo % ml-stack --init --model am-i-a-dog
+(.ml-stack-demo) <computer> demo % ml-stack --init --model am-i-a-fish
 ```
 
 <details>
 <summary>Output</summary>
 
 ```log
-[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Creating model folder /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_dog
-[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Initializing default file /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_dog/main.invoke.py
-[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Initializing default file /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_dog/main.test.py
-[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Initializing default file /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_dog/main.train.py
+[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Creating model folder /Users/git/ml-stack-demo/demo/models/am_i_a_dog
+[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Initializing default file /Users/git/ml-stack-demo/demo/models/am_i_a_dog/main.invoke.py
+[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Initializing default file /Users/git/ml-stack-demo/demo/models/am_i_a_dog/main.test.py
+[2025-08-01T12:54:34Z DEBUG ml_stack::options::init::model] Initializing default file /Users/git/ml-stack-demo/demo/models/am_i_a_dog/main.train.py
 [2025-08-01T12:54:34Z INFO  ml_stack::options::init::model] Successfully added a new project model for am-i-a-dog
 ```
 
 ```log
-[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Creating model folder /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_fish
-[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Initializing default file /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_fish/main.invoke.py
-[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Initializing default file /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_fish/main.test.py
-[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Initializing default file /Users/kevinmalmsten/git/ml-stack-demo/demo/models/am_i_a_fish/main.train.py
+[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Creating model folder /Users/git/ml-stack-demo/demo/models/am_i_a_fish
+[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Initializing default file /Users/git/ml-stack-demo/demo/models/am_i_a_fish/main.invoke.py
+[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Initializing default file /Users/git/ml-stack-demo/demo/models/am_i_a_fish/main.test.py
+[2025-08-01T12:54:37Z DEBUG ml_stack::options::init::model] Initializing default file /Users/git/ml-stack-demo/demo/models/am_i_a_fish/main.train.py
 [2025-08-01T12:54:37Z INFO  ml_stack::options::init::model] Successfully added a new project model for am-i-a-fish
 ```
 
@@ -102,7 +102,7 @@ The Deployment Repository now has new configuration files and running scripts
 for each of the models.
 
 ```
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 demo % tree
+(.ml-stack-demo) <computer> demo % tree
 .
 ├── config
 │   ├── am.i.a.dog.toml
@@ -197,7 +197,7 @@ Repo. This is possible because `ml-stack` will establish a new orphan Github
 branch for each model.
 
 ```
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 ml-stack-demo % git branch
+(.ml-stack-demo) <computer> ml-stack-demo % git branch
 * am-i-a-dog@0.0.0
   am-i-a-fish@0.0.0
   main
@@ -206,7 +206,7 @@ branch for each model.
 Now committed in the orphan branch are the following template files:
 
 ```
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 ml-stack-demo % tree
+(.ml-stack-demo) <computer> ml-stack-demo % tree
 .
 ├── README.md
 ├── requirements.txt
@@ -262,7 +262,7 @@ Requesting `--run` with the target GitHub branch, will checkout out our
 committed code and build a Docker image for running the official experiment
 
 ```
-(.ml-stack-demo) kevinmalmsten@Kevins-MacBook-Pro-3 ml-stack-demo % ml-stack --run am-i-a-dog@0.0.0
+(.ml-stack-demo) <computer> ml-stack-demo % ml-stack --run am-i-a-dog@0.0.0
 ```
 
 <details>
