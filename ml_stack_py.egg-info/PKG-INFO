@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: ml-stack-py
-Version: 0.1.0
-Summary: Core library for running ML-Flow experiments crispy clean
-Author: Kevinnnnn
-License: Illegal to use without a handwritten note
-Requires-Python: >=3.7
-Description-Content-Type: text/markdown
-Requires-Dist: mlflow
