@@ -1,7 +1,18 @@
-# ml-stack-demp
+# ml-stack-demo
 
 In this demo, we are going to use the `ml-stack` CLI toolchain to initialize,
 manage and deploy the models.
+
+## Branches
+
+There are 5 branches in this repo:
+
+- `main` (Deployment Repo for the ML Models)
+- `am-i-a-dog@0.0.0` (ML Model runner for ML-Flow)
+- `demo-sample-server` (A sample data source for the ML Model)
+- `ml-stack` (A Rust CLI tool for managing the project)
+- `ml-stack-py` (A python library to automate some of the ML-Flow tagging)
+
 
 ## 1) Init a new Deployment Repo
 
