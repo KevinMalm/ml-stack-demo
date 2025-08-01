@@ -3,6 +3,16 @@ import mlflow
 import json
 
 
+def setup():
+    # Load Env Vars
+    _host = os.getenv("MLFLOW_HOST", "127.0.0.1")
+    _port = os.getenv("MLFLOW_PORT", "5050")
+
+    # Parse the ML Flow TAGs
+    print("Configuring the ML Flow host")
+    mlflow.set_tracking_uri(f"http://{_host}:{_port}")
+
+
 def configure():
     # Load Env Vars
     _experiment = os.getenv("MLFLOW_EXPERIMENT_NAME")
