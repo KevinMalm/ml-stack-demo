@@ -48,7 +48,7 @@ def main():
         mlflow.log_metric("val_accuracy", val_acc)
         mlflow.log_metric("val_loss", val_loss)
 
-        print(f"✅ Training complete. Validation Accuracy: {val_acc:.3f}")
+        print(f"Done!")
 
 
 def generate_training_data(n=100):
