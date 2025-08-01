@@ -41,7 +41,7 @@ def main():
             epochs=50,
             verbose=1,
         )
-        # Optional manual logging (for clarity)
+        # Log into ML-Flow
         mlflow.log_param("embedding_dim", _EMBEDDING)
         mlflow.log_param("max_len", _MAX_LEN)
         val_loss, val_acc = model.evaluate(val_x, np.array(val_y), verbose=0)
@@ -100,7 +100,7 @@ def prep_data(x, y):
         x_padded,
         y,
         test_size=0.4,
-        stratify=y,
+        stratify=y, # Keep things balanced!
     )
     return (x_train, x_val), (y_train, y_val)
 
