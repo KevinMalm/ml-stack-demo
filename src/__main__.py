@@ -71,6 +71,7 @@ def generate_training_data(n=100):
 
         except Exception as e:
             print(f"An error occurred: {e}")
+            raise e
     # Save file and log to ML-Flow
     _TRAINING_FILE = "training.set.csv"
     with open(_TRAINING_FILE, "w") as f:
