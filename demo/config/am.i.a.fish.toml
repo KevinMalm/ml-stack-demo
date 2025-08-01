@@ -1,0 +1,11 @@
+label = "am-i-a-fish"
+description = "Placeholder description"
+tags = []
+
+[production]
+branch = "<github branch>"
+version = "version-tag"
+
+[staging]
+branch = "<github branch>"
+version = "version-tag"

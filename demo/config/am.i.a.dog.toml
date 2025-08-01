@@ -1,0 +1,8 @@
+label = "am-i-a-dog"
+description = "Placeholder description"
+tags = []
+
+
+[staging]
+branch = "am-i-a-dog@400.0.0"                # Code version for retraining
+version = "2ea2f9acb80a41b1bdd5fc0b771abb88" # Model Weight Version

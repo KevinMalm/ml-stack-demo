@@ -1,0 +1,15 @@
+label = "demo"
+prefix = "demo"
+description = "Placeholder description"
+
+[tag]
+key = "Project"
+value = "demo"
+
+[git]
+default_repository_url = "https://github.com/KevinMalm/ml-stack-demo.git"
+
+[dockerfile]
+default_training = "templates/docker/eval.train"
+default_evaluation = "templates/docker/eval.docker"
+default_predict = "templates/docker/eval.predict"
