@@ -25,7 +25,7 @@ def generate_record():
 
 
 @app.route("/live", methods=["GET"])
-def get_next():
+def get_live():
     ascii_string, _truth_string, _is_dog = generate_record()
     response = {"content": ascii_string}
 
@@ -33,7 +33,7 @@ def get_next():
 
 
 @app.route("/test", methods=["GET"])
-def get_next():
+def get_test():
     ascii_string, truth_string, is_dog = generate_record()
     response = {"content": ascii_string, "value": truth_string, "flag": is_dog}
 
