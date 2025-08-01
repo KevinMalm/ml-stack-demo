@@ -26,7 +26,7 @@ class ApiRecord:
 
 
 def main():
-    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    ml_stack_py.setup()
     with mlflow.start_run(run_name="Am-I-a-Dog?"):
         ml_stack_py.configure()
         mlflow.tensorflow.autolog()
