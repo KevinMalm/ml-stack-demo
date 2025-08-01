@@ -5,12 +5,10 @@ import json
 
 def setup():
     # Load Env Vars
-    _host = os.getenv("MLFLOW_HOST", "127.0.0.1")
-    _port = os.getenv("MLFLOW_PORT", "5050")
-
+    url = os.getenv("MLFLOW_URL", "http://127.0.0.1:5050")
     # Parse the ML Flow TAGs
-    print(f"Configuring the ML Flow host to {_host}:{_port}")
-    mlflow.set_tracking_uri(f"http://{_host}:{_port}")
+    print(f"Configuring the ML Flow host to {url}")
+    mlflow.set_tracking_uri(url)
 
 
 def configure():
