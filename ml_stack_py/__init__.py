@@ -1,1 +1,1 @@
-from .core import configure
+from .core import configure, setup
