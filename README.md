@@ -342,7 +342,7 @@ latest Run-ID version so each execution knows which artifact to pull from.
 
 ```toml
 [staging] # or Production
-branch = "am-i-a-dog@400.0.0"                # Code version for retraining
+branch = "am-i-a-dog@0.0.0"                # Code version for retraining
 version = "2ea2f9acb80a41b1bdd5fc0b771abb88" # Model Weight Version
 ```
 
@@ -358,7 +358,7 @@ app = Flask(__name__)
 
 model_uri = f"runs:/{os.environ['MODEL-ID']}/model"
 
-MODEL = mlflow.tensorflow.load_model(model_uri) # Load th model here
+MODEL = mlflow.tensorflow.load_model(model_uri) # Load the model here
 
 
 @app.route("/predict", methods=["POST"])
